@@ -13,7 +13,7 @@ RUN chmod +x entrypoint.sh
 RUN apt-get update && apt-get install -y dos2unix && dos2unix entrypoint.sh
 
 # Set the environment variable WS_BACK_URL
-ENV WS_BACK_URL=http://backend-service:5000
+ENV WS_BACK_URL=http://new-container:8080
 
 # Set the entrypoint
 ENTRYPOINT ["./entrypoint.sh"]
